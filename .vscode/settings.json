@@ -1,0 +1,27 @@
+{
+    "html.format.indentHandlebars": true,
+    "emmet.preferences": {
+    
+    },
+
+    "emmet.includeLanguages": {
+        "javascript": "html"
+    },
+    "vetur.format.defaultFormatter.js": "prettier-eslint",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "prettier.disableLanguages": [
+        "javascript",
+        "javascriptreact"
+    ],
+    "eslint.format.enable": true,
+    
+}
