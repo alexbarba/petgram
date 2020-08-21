@@ -23,5 +23,6 @@
         "javascriptreact"
     ],
     "eslint.format.enable": true,
+    "editor.fontFamily": "Fira Code",
     
 }
