@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import { Category } from '../Category'
 import { List, Item } from './styles'
-
-export const ListOfCategories = () => {
+import Loader from 'react-loader-spinner'
+function useCategoriesData () {
   const [categories, setCategories] = useState([])
-  const [showFixed, setShowFixed] = useState(false)
-
+  const [loading, setLoading] = useState(false)
   useEffect(function () {
+    setLoading(true)
     window.fetch('https://petgram-server-alexbarba.vercel.app/categories')
       .then(res => res.json())
       .then(response => {
         setCategories(response)
+        setLoading(false)
       })
   }, [])
+
+  return { categories, loading }
+}
+export const ListOfCategories = () => {
+  const [showFixed, setShowFixed] = useState(false)
+  const { categories, loading } = useCategoriesData()
 
   useEffect(function () {
     const onScroll = e => {
@@ -26,9 +33,11 @@ export const ListOfCategories = () => {
   }, [showFixed])
 
   const renderList = (fixed) => (
-    <List className={fixed ? 'fixed' : ''}>
+    <List fixed={fixed}>
       {
-        categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+        loading
+          ? [1, 2, 3, 4, 5, 6].map(loader => <Item key={loader}><Loader type='Oval' color='orange' /></Item>)
+          : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
       }
     </List>
   )
