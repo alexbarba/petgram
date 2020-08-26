@@ -1,8 +1,18 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import ReactDOM from 'react-dom'
+// Utilidad que nos permite inicializar nuestra conexión con un servidor de Apollo muy rápidamente y sin configuración
+import ApolloClient from 'apollo-boost'
+// Integración de Apollo con React, ApolloProvider nos permite envolver toda nuestra aplicacion para poder usar apollo en todo el arbol de elementos
+import { ApolloProvider } from 'react-apollo'
+
 import { App } from './App'
 
-ReactDom.render(
-  <App />,
-  document.getElementById('app')
-)
+const client = new ApolloClient({
+  uri: 'https://petgram-server-alexbarba.vercel.app/graphql'
+})
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('app'))
