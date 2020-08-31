@@ -37,7 +37,7 @@ export const ListOfCategories = () => {
       {
         loading
           ? [1, 2, 3, 4, 5, 6].map(loader => <Item key={loader}><Loader type='Oval' color='orange' /></Item>)
-          : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+          : categories.map(category => <Item key={category.id}><Category {...category} path={`/pet/${category.id}`} /></Item>)
       }
     </List>
   )
