@@ -43,6 +43,7 @@
         "react": "^16.13.1",
         "react-apollo": "^3.1.5",
         "react-dom": "^16.13.1",
+        "react-helmet": "^6.1.0",
         "react-icons": "^3.11.0",
         "react-loader-spinner": "^3.1.14",
         "styled-components": "^5.1.1"
