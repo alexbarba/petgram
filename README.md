@@ -1,5 +1,10 @@
 # curso-platzi-react-avanzado ⚛️
 
-¡Sígueme en Youtube! https://www.youtube.com/midudev
+Comando para correr el server en modo desarrollo:
+npm run serve:dev
 
-Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)
+Crear una instancia app para modo desarrollo
+vercel
+
+Actualizar la app modo produccion:
+vercel --prod
