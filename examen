@@ -1,0 +1,83 @@
+1 ¿Para qué necesitamos utilizar Babel y Webpack en nuestro proyecto?
+Babel hará que podamos utilizar JSX y otras características de Javascript todavía no soportadas en todos los navegadores en nuestro proyecto. Webpack, por su parte, nos empaquetará la aplicación y permitirá que podamos usar los módulos EcmaScript para resolver dependencias.
+
+2 ¿Qué es StandardJS?
+Unas reglas para lintar nuestro código. Aunque se llama Standard, no es oficial, aunque hay muchos proyectos que lo utilizan de forma predeterminada.
+
+3 Qué son los React Hooks?
+Los hooks en React son una nueva característica de la librería, disponible desde la versión 16.8.0, que nos permite tener estado en nuestros componentes funcionalidades, entre otras cosas, que hasta hace muy poco sólo podíamos conseguir con componentes con clases.
+
+4 ¿A qué nos referimos cuando hablamos de CSS en JS?
+Es una técnica dónde escribimos las propiedades CSS en nuestros archivos Javascript para estilar nuestros componentes. Esto ofrece varias ventajas, como la optimización y poder usar la potencia de Javascript en nuestros estilos.
+
+5 ¿Qué nos ofrece la librería styled-components?
+Librería que nos permite estilar de forma muy sencilla, siguiendo CSS y usando los tags de HTML que queramos usar en nuestra aplicación y cualquier componente que acepte una prop className.
+
+6 El hook useState sirve para: 
+Crear un estado local en nuestro componente.
+
+7 El hook useEffect se ejecuta:
+Cada vez que ese renderiza el componente. Podemos saltarnos la ejecución indicándole en un segundo parámetro con una lista de valores de los que depende el efecto. 
+
+8 Para qué sirven los Custom Hooks?
+x Sirven para ejecutar código de forma declarativa y React se encargará de que se actualicen de forma eficiente cada vez que los datos de esos hooks que hemos creado cambien. Deben empezar por la palabra use (useMiNombreDeHook)
+
+9 ¿Puede un custom hook tener estado?
+Sí, los custom hooks pueden usar otros hooks incluso, otros custom hooks.
+
+10 ¿Cómo definirías React Apollo?
+Es un cliente que nos permite hacer peticiones a un servidor utilizando el lenguaje GraphQL. Además, tiene los conectores necesarios para ser utilizado en una aplicación que utilice React, de forma que nos facilita su integración y uso.
+
+11 ¿Qué es un High Order Component?
+Es una función que toma un componente como parámetro y devuelve un nuevo componente. Muy útil para reusar lógica.
+
+12 ¿Cómo conseguimos pasarle parámetros a una query en React Apollo?
+x Usando directamente los parámetros en la query y automáticamente React Apollo inyectará los datos que necesite
+
+13 ¿Qué son las renderProps?
+Es una técnica para compartir código entre componentes en React que utiliza una prop (cómo children u otra de otro nombre, aunque normalmente se usa render) como función, que recibe como parámetro información y devuelve el componente que queremos que renderice.
+
+14 ¿Qué son las mutaciones en GraphQL?
+Las mutaciones son las operaciones que no corresponden a una consulta: la creación, modificación, borrado o actualización de información.
+
+15 ¿Qué es @reach/router?
+Es una librería independiente que nos permite crear una SPA en React que gestiona rutas de forma declarativa y que se preocupa por la accesibilidad.
+
+16 ¿Qué componente se utiliza para crear rutas en @reach/router?
+Para crear rutas en @reach/router, envolvemos nuestros componentes página con el componente  y cada componente ya podrá utilizar la prop "path" para especificar en qué path se renderizará cada componente.
+
+17 ¿Cómo podemos navegar entre páginas sin recargarla?
+Usando el componente Link de @reach/router
+
+18 ¿Podemos saber si un enlace va a la ruta que está activa?
+Sí, en el componente Link podemos saber si está enlazando a una página activa recuperando sus props. Además, podemos darle estilos directamente, ya que @reach/router le añade el atributo aria-current="page"
+
+19 ¿Qué son las rutas protegidas?
+Son rutas que no se pueden acceder dependiendo de una condición. Esta condición podría ser cualquier cosa como, por ejemplo, que el usuario haya iniciado sesión en nuestro sitio y tenga los permisos necesarios.
+
+20 ¿Qué podemos hacer con el Context de React?
+El contexto en React nos permite pasar información a través del árbol de components sin necesidad de usar props en cada nivel
+
+21 ¿Cómo podemos usar el Contexto de React? 
+Tenemos que crear el contexto con React.createContext. Este contexto es un objeto con dos propiedades. Una es el Provider, que nos permite envolver la parte del árbol que queremos que tenga acceso al contexto. La otra es el Consumer, que nos permite suscribirnos a los cambios y valores que tendrá el contexto. También podemos usar el hook useContext como Consumer para leer los valores del contexto.
+
+22 ¿Podemos hacer SEO en nuestras aplicaciones de React?
+si, con librerias como helmet
+
+23 ¿Se puede crear una PWA de una aplicación de React?
+Claro, y podemos utilizar herramientas como Workbox para ayudarnos.
+
+24 ¿Qué es la performance de un sitio?
+Es la velocidad a la que una web es descargada, mostrada en el navegador y usable por el usuario.
+
+25 ¿Qué debemos medir para la performance de nuestra web?
+La performance de una web no se limita a una sola métrica pero, actualmente, la recomendación es fijarse en las métricas que afectan directamente a la experiencia del usuario, como el Time To Interactive. Lighthouse puede ayudarnos, ya que simula una conexión móvil para los datos.
+
+26 ¿Para qué sirve la función React.lazy?
+x Nos permite cargar un componente sólo cuando está en el viewport, de esta forma optimizamos mucho la carga de la aplicación y cargamos sólo lo que se ve.
+
+27 ¿Para qué podemos utilizar React.memo?
+Nos permite determinar cuándo un componente funcional se debe renderizar. Para ello podemos comparar las props anteriores y las nuevas.
+
+28 Cypress nos ofrece una forma de:
+Testear de forma fácil, rápida y confiable cualquier cosa que se ejecute en el servidor como, por ejemplo, una aplicación web.
