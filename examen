@@ -21,6 +21,8 @@ Cada vez que ese renderiza el componente. Podemos saltarnos la ejecución indic�
 
 8 Para qué sirven los Custom Hooks?
 x Sirven para ejecutar código de forma declarativa y React se encargará de que se actualicen de forma eficiente cada vez que los datos de esos hooks que hemos creado cambien. Deben empezar por la palabra use (useMiNombreDeHook)
+x Los podemos utilizar para poder ejecutar código arbitrariamente cuando queramos. De esta forma, cada vez que el usuario haga una acción, podemos usar un custom Hook para ejecutar una acción.
+Sirven para poder reutilizar la lógica en diferentes componentes. Para poder utilizarlos, deben empezar por la palabra use (useMiNombreDeHook).
 
 9 ¿Puede un custom hook tener estado?
 Sí, los custom hooks pueden usar otros hooks incluso, otros custom hooks.
@@ -33,6 +35,8 @@ Es una función que toma un componente como parámetro y devuelve un nuevo compo
 
 12 ¿Cómo conseguimos pasarle parámetros a una query en React Apollo?
 x Usando directamente los parámetros en la query y automáticamente React Apollo inyectará los datos que necesite
+Usando la prop “variables” del componente <Query />, que recibe un objeto con todos los parámetros que queremos utilizar en la petición.
+
 
 13 ¿Qué son las renderProps?
 Es una técnica para compartir código entre componentes en React que utiliza una prop (cómo children u otra de otro nombre, aunque normalmente se usa render) como función, que recibe como parámetro información y devuelve el componente que queremos que renderice.
@@ -75,6 +79,8 @@ La performance de una web no se limita a una sola métrica pero, actualmente, la
 
 26 ¿Para qué sirve la función React.lazy?
 x Nos permite cargar un componente sólo cuando está en el viewport, de esta forma optimizamos mucho la carga de la aplicación y cargamos sólo lo que se ve.
+x Es una forma de hacer que los componentes de React no se ejecuten al inicio. De esta forma sólo se ejecutarán cuando haya pasado un tiempo. Con 
+La función React.lazy nos permite renderizar un import dinámico como si fuese un componente normal. Para que funcione, debemos envolverlo con el componente 
 
 27 ¿Para qué podemos utilizar React.memo?
 Nos permite determinar cuándo un componente funcional se debe renderizar. Para ello podemos comparar las props anteriores y las nuevas.
